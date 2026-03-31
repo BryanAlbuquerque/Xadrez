@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace Xadrez.Forms
 {
@@ -18,6 +12,13 @@ namespace Xadrez.Forms
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Jogo = new Jogo();
+            Jogo.Show();
+            this.Hide();
         }
     }
 }

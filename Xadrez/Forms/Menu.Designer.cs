@@ -71,6 +71,7 @@
             button1.TabIndex = 2;
             button1.Text = "Jogar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Menu
             // 
