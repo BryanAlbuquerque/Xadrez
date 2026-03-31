@@ -1,6 +1,6 @@
 ﻿namespace Xadrez
 {
-    partial class FormPrincipal
+    partial class Jogo
     {
         /// <summary>
         ///  Required designer variable.

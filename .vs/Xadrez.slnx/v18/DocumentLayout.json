@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Projetos\\Xadrez\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BDCE38D-B0A8-4DFD-8CA0-B7DA2850534E}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4BDCE38D-B0A8-4DFD-8CA0-B7DA2850534E}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,35 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs",
+              "RelativeDocumentMoniker": "Xadrez\\Forms\\Menu.cs",
+              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs",
+              "RelativeToolTip": "Xadrez\\Forms\\Menu.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T21:55:31.523Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Menu.cs [Projeto]",
+              "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs",
+              "RelativeDocumentMoniker": "Xadrez\\Forms\\Menu.cs",
+              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs [Projeto]",
+              "RelativeToolTip": "Xadrez\\Forms\\Menu.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T21:49:23.351Z",
+              "IsPinned": true,
+              "EditorCaption": " [Projeto]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -31,18 +62,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPrincipal.cs [Projeto]",
-              "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "Xadrez\\FormPrincipal.cs",
-              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\FormPrincipal.cs [Projeto]",
-              "RelativeToolTip": "Xadrez\\FormPrincipal.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T23:57:48.414Z",
-              "EditorCaption": " [Projeto]"
             }
           ]
         }
