@@ -32,7 +32,10 @@
             pictureBox1 = new PictureBox();
             btnFechar = new Button();
             button1 = new Button();
+            label1 = new Label();
+            imgRay = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgRay).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -73,11 +76,36 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Cursor = Cursors.Hand;
+            label1.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(4, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(168, 30);
+            label1.TabIndex = 3;
+            label1.Text = "CLIQUE AQUI";
+            label1.Click += label1_Click;
+            // 
+            // imgRay
+            // 
+            imgRay.Image = (Image)resources.GetObject("imgRay.Image");
+            imgRay.Location = new Point(12, 39);
+            imgRay.Name = "imgRay";
+            imgRay.Size = new Size(123, 167);
+            imgRay.SizeMode = PictureBoxSizeMode.StretchImage;
+            imgRay.TabIndex = 4;
+            imgRay.TabStop = false;
+            imgRay.Visible = false;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1024, 582);
+            Controls.Add(imgRay);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(btnFechar);
             Controls.Add(pictureBox1);
@@ -86,7 +114,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgRay).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -94,5 +124,7 @@
         private PictureBox pictureBox1;
         private Button btnFechar;
         private Button button1;
+        private Label label1;
+        private PictureBox imgRay;
     }
 }
