@@ -9,7 +9,6 @@ namespace Xadrez
             InitializeComponent();
         }
 
-        Posicao P = new Posicao(0, 0);
 
 
     }

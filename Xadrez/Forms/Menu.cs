@@ -21,9 +21,5 @@ namespace Xadrez.Forms
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            imgRay.Visible = true;
-        }
     }
 }
