@@ -26,6 +26,8 @@ namespace Xadrez
                 checkPretasP2.Checked = false;
                 MessageBox.Show("Jogador 1 escolheu as peças pretas, Jogador 2 jogará com as peças brancas.");
             }
+
+           
         }
     }
 }

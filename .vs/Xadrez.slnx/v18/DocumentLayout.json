@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Projetos\\Xadrez\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|D:\\Projetos\\Xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -64,18 +64,17 @@
               "RelativeToolTip": "Xadrez\\Forms\\Menu.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T00:08:16.38Z",
-              "IsPinned": true,
-              "EditorCaption": " [Projeto]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Jogo.cs",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwBgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAhwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T23:54:31.713Z",
               "IsPinned": true,
@@ -99,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Jogo.cs [Projeto]",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
@@ -132,8 +131,7 @@
               "RelativeToolTip": "Xadrez\\Classes\\Tabuleiro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:45:31.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T12:45:31.186Z"
             },
             {
               "$type": "Document",
@@ -145,8 +143,7 @@
               "RelativeToolTip": "Xadrez\\Classes\\Peca.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:43:21.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T12:43:21.49Z"
             }
           ]
         }
