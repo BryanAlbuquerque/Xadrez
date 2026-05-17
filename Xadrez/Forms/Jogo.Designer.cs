@@ -125,13 +125,13 @@
             CavaloBranco01 = new PictureBox();
             A8 = new Panel();
             TorreBranca01 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            checkBrancasP1 = new CheckBox();
-            checkPretasP1 = new CheckBox();
+            btnIniciar = new Button();
+            label1 = new Label();
+            label2 = new Label();
             checkPretasP2 = new CheckBox();
             checkBrancasP2 = new CheckBox();
-            btnIniciar = new Button();
+            checkPretasP1 = new CheckBox();
+            checkBrancasP1 = new CheckBox();
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
@@ -533,6 +533,7 @@
             H2.BackColor = Color.Black;
             H2.BorderStyle = BorderStyle.FixedSingle;
             H2.Controls.Add(PeaoPreto08);
+            H2.ImeMode = ImeMode.NoControl;
             H2.Location = new Point(794, 88);
             H2.Name = "H2";
             H2.Size = new Size(88, 70);
@@ -590,6 +591,7 @@
             // 
             F3.BackColor = Color.White;
             F3.BorderStyle = BorderStyle.Fixed3D;
+            F3.ImeMode = ImeMode.NoControl;
             F3.Location = new Point(573, 169);
             F3.Name = "F3";
             F3.Size = new Size(88, 70);
@@ -1190,88 +1192,87 @@
             TorreBranca01.TabStop = false;
             TorreBranca01.Visible = false;
             // 
-            // button1
+            // btnIniciar
             // 
-            button1.Font = new Font("Stencil", 9F);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(911, 112);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 26);
-            button1.TabIndex = 112;
-            button1.Text = "Jogador 2";
-            button1.UseVisualStyleBackColor = true;
+            btnIniciar.BackColor = Color.Thistle;
+            btnIniciar.Cursor = Cursors.Hand;
+            btnIniciar.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnIniciar.ForeColor = SystemColors.ActiveCaptionText;
+            btnIniciar.Location = new Point(898, 186);
+            btnIniciar.Name = "btnIniciar";
+            btnIniciar.Size = new Size(131, 38);
+            btnIniciar.TabIndex = 118;
+            btnIniciar.Text = "Iniciar";
+            btnIniciar.UseVisualStyleBackColor = false;
+            btnIniciar.Click += btnIniciar_Click;
             // 
-            // button2
+            // label1
             // 
-            button2.Font = new Font("Stencil", 9F);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(912, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(113, 26);
-            button2.TabIndex = 113;
-            button2.Text = "Jogador 1";
-            button2.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(905, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 25);
+            label1.TabIndex = 119;
+            label1.Text = "Jogador N°1";
             // 
-            // checkBrancasP1
+            // label2
             // 
-            checkBrancasP1.AutoSize = true;
-            checkBrancasP1.Font = new Font("Stencil", 9F);
-            checkBrancasP1.ForeColor = SystemColors.Control;
-            checkBrancasP1.Location = new Point(912, 45);
-            checkBrancasP1.Name = "checkBrancasP1";
-            checkBrancasP1.Size = new Size(117, 18);
-            checkBrancasP1.TabIndex = 114;
-            checkBrancasP1.Text = "Peças Brancas";
-            checkBrancasP1.UseVisualStyleBackColor = true;
-            // 
-            // checkPretasP1
-            // 
-            checkPretasP1.AutoSize = true;
-            checkPretasP1.Font = new Font("Stencil", 9F);
-            checkPretasP1.ForeColor = SystemColors.Control;
-            checkPretasP1.Location = new Point(912, 70);
-            checkPretasP1.Name = "checkPretasP1";
-            checkPretasP1.Size = new Size(109, 18);
-            checkPretasP1.TabIndex = 115;
-            checkPretasP1.Text = "Peças Pretas";
-            checkPretasP1.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(905, 93);
+            label2.Name = "label2";
+            label2.Size = new Size(124, 25);
+            label2.TabIndex = 120;
+            label2.Text = "Jogador N°2";
             // 
             // checkPretasP2
             // 
             checkPretasP2.AutoSize = true;
-            checkPretasP2.Font = new Font("Stencil", 9F);
+            checkPretasP2.Font = new Font("Cooper Black", 11.25F);
             checkPretasP2.ForeColor = SystemColors.Control;
-            checkPretasP2.Location = new Point(910, 170);
+            checkPretasP2.Location = new Point(905, 143);
             checkPretasP2.Name = "checkPretasP2";
-            checkPretasP2.Size = new Size(109, 18);
-            checkPretasP2.TabIndex = 117;
+            checkPretasP2.Size = new Size(122, 21);
+            checkPretasP2.TabIndex = 122;
             checkPretasP2.Text = "Peças Pretas";
             checkPretasP2.UseVisualStyleBackColor = true;
             // 
             // checkBrancasP2
             // 
             checkBrancasP2.AutoSize = true;
-            checkBrancasP2.Font = new Font("Stencil", 9F);
+            checkBrancasP2.Font = new Font("Cooper Black", 11.25F);
             checkBrancasP2.ForeColor = SystemColors.Control;
-            checkBrancasP2.Location = new Point(910, 145);
+            checkBrancasP2.Location = new Point(905, 121);
             checkBrancasP2.Name = "checkBrancasP2";
-            checkBrancasP2.Size = new Size(117, 18);
-            checkBrancasP2.TabIndex = 116;
+            checkBrancasP2.Size = new Size(135, 21);
+            checkBrancasP2.TabIndex = 121;
             checkBrancasP2.Text = "Peças Brancas";
             checkBrancasP2.UseVisualStyleBackColor = true;
             // 
-            // btnIniciar
+            // checkPretasP1
             // 
-            btnIniciar.Cursor = Cursors.Hand;
-            btnIniciar.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIniciar.ForeColor = SystemColors.ActiveCaptionText;
-            btnIniciar.Location = new Point(898, 213);
-            btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(131, 38);
-            btnIniciar.TabIndex = 118;
-            btnIniciar.Text = "Iniciar";
-            btnIniciar.UseVisualStyleBackColor = true;
-            btnIniciar.Click += btnIniciar_Click;
+            checkPretasP1.AutoSize = true;
+            checkPretasP1.Font = new Font("Cooper Black", 11.25F);
+            checkPretasP1.ForeColor = SystemColors.Control;
+            checkPretasP1.Location = new Point(905, 61);
+            checkPretasP1.Name = "checkPretasP1";
+            checkPretasP1.Size = new Size(122, 21);
+            checkPretasP1.TabIndex = 124;
+            checkPretasP1.Text = "Peças Pretas";
+            checkPretasP1.UseVisualStyleBackColor = true;
+            // 
+            // checkBrancasP1
+            // 
+            checkBrancasP1.AutoSize = true;
+            checkBrancasP1.Font = new Font("Cooper Black", 11.25F);
+            checkBrancasP1.ForeColor = SystemColors.Control;
+            checkBrancasP1.Location = new Point(905, 37);
+            checkBrancasP1.Name = "checkBrancasP1";
+            checkBrancasP1.Size = new Size(135, 21);
+            checkBrancasP1.TabIndex = 123;
+            checkBrancasP1.Text = "Peças Brancas";
+            checkBrancasP1.UseVisualStyleBackColor = true;
             // 
             // Jogo
             // 
@@ -1279,13 +1280,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SaddleBrown;
             ClientSize = new Size(1037, 737);
-            Controls.Add(btnIniciar);
-            Controls.Add(checkPretasP2);
-            Controls.Add(checkBrancasP2);
             Controls.Add(checkPretasP1);
             Controls.Add(checkBrancasP1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(checkPretasP2);
+            Controls.Add(checkBrancasP2);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnIniciar);
             Controls.Add(H7);
             Controls.Add(H8);
             Controls.Add(G7);
@@ -1488,12 +1489,6 @@
         private Panel A7;
         private Panel B8;
         private Panel A8;
-        private Button button1;
-        private Button button2;
-        private CheckBox checkBrancasP1;
-        private CheckBox checkPretasP1;
-        private CheckBox checkPretasP2;
-        private CheckBox checkBrancasP2;
         private Button btnIniciar;
         private PictureBox PeaoBranco08;
         private PictureBox PeaoBranco07;
@@ -1528,5 +1523,11 @@
         private PictureBox CavaloPreto02;
         private PictureBox TorrePreta02;
         private PictureBox PeaoPreto08;
+        private Label label1;
+        private Label label2;
+        private CheckBox checkPretasP2;
+        private CheckBox checkBrancasP2;
+        private CheckBox checkPretasP1;
+        private CheckBox checkBrancasP1;
     }
 }
