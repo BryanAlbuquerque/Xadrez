@@ -132,6 +132,7 @@
             checkBrancasP2 = new CheckBox();
             checkPretasP1 = new CheckBox();
             checkBrancasP1 = new CheckBox();
+            listView = new ListView();
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
@@ -1274,12 +1275,21 @@
             checkBrancasP1.Text = "Peças Brancas";
             checkBrancasP1.UseVisualStyleBackColor = true;
             // 
+            // listView
+            // 
+            listView.Location = new Point(892, 241);
+            listView.Name = "listView";
+            listView.Size = new Size(141, 303);
+            listView.TabIndex = 125;
+            listView.UseCompatibleStateImageBehavior = false;
+            // 
             // Jogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SaddleBrown;
             ClientSize = new Size(1037, 737);
+            Controls.Add(listView);
             Controls.Add(checkPretasP1);
             Controls.Add(checkBrancasP1);
             Controls.Add(checkPretasP2);
@@ -1355,7 +1365,6 @@
             Name = "Jogo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Jogo";
-            Load += Jogo_Load;
             A2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).EndInit();
             A1.ResumeLayout(false);
@@ -1529,5 +1538,6 @@
         private CheckBox checkBrancasP2;
         private CheckBox checkPretasP1;
         private CheckBox checkBrancasP1;
+        private ListView listView;
     }
 }
