@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Projetos\\Xadrez\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|D:\\Projetos\\Xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\classes\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\classes\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\classes\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\classes\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|D:\\Projetos\\Xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\classes\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\classes\\tabuleiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\classes\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\classes\\peca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Menu.cs",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Menu.cs",
@@ -56,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Menu.cs [Projeto]",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Menu.cs",
@@ -68,13 +64,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Jogo.cs",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
-              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs*",
-              "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs*",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAhwAoAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
+              "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T23:54:31.713Z",
               "IsPinned": true,
@@ -98,32 +94,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Jogo.cs [Projeto]",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
-              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs [Projeto]*",
-              "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs [Projeto]*",
+              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs [Projeto]",
+              "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-01T13:01:35.633Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Program.cs",
-              "RelativeDocumentMoniker": "Xadrez\\Program.cs",
-              "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Program.cs",
-              "RelativeToolTip": "Xadrez\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:50:24.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Tabuleiro.cs",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Classes\\Tabuleiro.cs",
               "RelativeDocumentMoniker": "Xadrez\\Classes\\Tabuleiro.cs",
@@ -131,19 +114,21 @@
               "RelativeToolTip": "Xadrez\\Classes\\Tabuleiro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:45:31.186Z"
+              "WhenOpened": "2026-05-01T12:45:31.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Peca.cs",
               "DocumentMoniker": "D:\\Projetos\\Xadrez\\Xadrez\\Classes\\Peca.cs",
               "RelativeDocumentMoniker": "Xadrez\\Classes\\Peca.cs",
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Classes\\Peca.cs",
               "RelativeToolTip": "Xadrez\\Classes\\Peca.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T12:43:21.49Z"
+              "WhenOpened": "2026-05-01T12:43:21.49Z",
+              "EditorCaption": ""
             }
           ]
         }
