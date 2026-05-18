@@ -21,5 +21,9 @@ namespace Xadrez.Forms
             this.Hide();
         }
 
+        private void btnOpcao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jogo));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             A2 = new Panel();
             PeaoPreto01 = new PictureBox();
             A1 = new Panel();
@@ -125,14 +127,13 @@
             CavaloBranco01 = new PictureBox();
             A8 = new Panel();
             TorreBranca01 = new PictureBox();
-            btnIniciar = new Button();
             label1 = new Label();
             label2 = new Label();
             checkPretasP2 = new CheckBox();
             checkBrancasP2 = new CheckBox();
             checkPretasP1 = new CheckBox();
             checkBrancasP1 = new CheckBox();
-            listView = new ListView();
+            btnIniciar = new Guna.UI2.WinForms.Guna2GradientButton();
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
@@ -1193,37 +1194,25 @@
             TorreBranca01.TabStop = false;
             TorreBranca01.Visible = false;
             // 
-            // btnIniciar
-            // 
-            btnIniciar.BackColor = Color.Thistle;
-            btnIniciar.Cursor = Cursors.Hand;
-            btnIniciar.Font = new Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIniciar.ForeColor = SystemColors.ActiveCaptionText;
-            btnIniciar.Location = new Point(898, 186);
-            btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(131, 38);
-            btnIniciar.TabIndex = 118;
-            btnIniciar.Text = "Iniciar";
-            btnIniciar.UseVisualStyleBackColor = false;
-            btnIniciar.Click += btnIniciar_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(905, 9);
             label1.Name = "label1";
-            label1.Size = new Size(124, 25);
+            label1.Size = new Size(157, 32);
             label1.TabIndex = 119;
             label1.Text = "Jogador N°1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(905, 93);
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(905, 102);
             label2.Name = "label2";
-            label2.Size = new Size(124, 25);
+            label2.Size = new Size(157, 32);
             label2.TabIndex = 120;
             label2.Text = "Jogador N°2";
             // 
@@ -1231,8 +1220,8 @@
             // 
             checkPretasP2.AutoSize = true;
             checkPretasP2.Font = new Font("Cooper Black", 11.25F);
-            checkPretasP2.ForeColor = SystemColors.Control;
-            checkPretasP2.Location = new Point(905, 143);
+            checkPretasP2.ForeColor = Color.Black;
+            checkPretasP2.Location = new Point(907, 158);
             checkPretasP2.Name = "checkPretasP2";
             checkPretasP2.Size = new Size(122, 21);
             checkPretasP2.TabIndex = 122;
@@ -1243,8 +1232,8 @@
             // 
             checkBrancasP2.AutoSize = true;
             checkBrancasP2.Font = new Font("Cooper Black", 11.25F);
-            checkBrancasP2.ForeColor = SystemColors.Control;
-            checkBrancasP2.Location = new Point(905, 121);
+            checkBrancasP2.ForeColor = Color.Black;
+            checkBrancasP2.Location = new Point(905, 137);
             checkBrancasP2.Name = "checkBrancasP2";
             checkBrancasP2.Size = new Size(135, 21);
             checkBrancasP2.TabIndex = 121;
@@ -1255,8 +1244,8 @@
             // 
             checkPretasP1.AutoSize = true;
             checkPretasP1.Font = new Font("Cooper Black", 11.25F);
-            checkPretasP1.ForeColor = SystemColors.Control;
-            checkPretasP1.Location = new Point(905, 61);
+            checkPretasP1.ForeColor = Color.Black;
+            checkPretasP1.Location = new Point(905, 69);
             checkPretasP1.Name = "checkPretasP1";
             checkPretasP1.Size = new Size(122, 21);
             checkPretasP1.TabIndex = 124;
@@ -1267,36 +1256,48 @@
             // 
             checkBrancasP1.AutoSize = true;
             checkBrancasP1.Font = new Font("Cooper Black", 11.25F);
-            checkBrancasP1.ForeColor = SystemColors.Control;
-            checkBrancasP1.Location = new Point(905, 37);
+            checkBrancasP1.ForeColor = Color.Black;
+            checkBrancasP1.Location = new Point(905, 44);
             checkBrancasP1.Name = "checkBrancasP1";
             checkBrancasP1.Size = new Size(135, 21);
             checkBrancasP1.TabIndex = 123;
             checkBrancasP1.Text = "Peças Brancas";
             checkBrancasP1.UseVisualStyleBackColor = true;
             // 
-            // listView
+            // btnIniciar
             // 
-            listView.Location = new Point(892, 241);
-            listView.Name = "listView";
-            listView.Size = new Size(141, 303);
-            listView.TabIndex = 125;
-            listView.UseCompatibleStateImageBehavior = false;
+            btnIniciar.BorderRadius = 10;
+            btnIniciar.CustomizableEdges = customizableEdges1;
+            btnIniciar.DisabledState.BorderColor = Color.DarkGray;
+            btnIniciar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnIniciar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnIniciar.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnIniciar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnIniciar.FillColor = Color.Black;
+            btnIniciar.FillColor2 = Color.FromArgb(255, 192, 255);
+            btnIniciar.Font = new Font("Showcard Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnIniciar.ForeColor = Color.White;
+            btnIniciar.Location = new Point(901, 196);
+            btnIniciar.Name = "btnIniciar";
+            btnIniciar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnIniciar.Size = new Size(157, 43);
+            btnIniciar.TabIndex = 125;
+            btnIniciar.Text = "Iniciar";
+            btnIniciar.Click += btnIniciar_Click_1;
             // 
             // Jogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SaddleBrown;
-            ClientSize = new Size(1037, 737);
-            Controls.Add(listView);
+            BackColor = Color.Aquamarine;
+            ClientSize = new Size(1059, 737);
+            Controls.Add(btnIniciar);
             Controls.Add(checkPretasP1);
             Controls.Add(checkBrancasP1);
             Controls.Add(checkPretasP2);
             Controls.Add(checkBrancasP2);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnIniciar);
             Controls.Add(H7);
             Controls.Add(H8);
             Controls.Add(G7);
@@ -1498,7 +1499,6 @@
         private Panel A7;
         private Panel B8;
         private Panel A8;
-        private Button btnIniciar;
         private PictureBox PeaoBranco08;
         private PictureBox PeaoBranco07;
         private PictureBox PeaoBranco06;
@@ -1538,6 +1538,7 @@
         private CheckBox checkBrancasP2;
         private CheckBox checkPretasP1;
         private CheckBox checkBrancasP1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnIniciar;
         private ListView listView;
     }
 }

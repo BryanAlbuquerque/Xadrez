@@ -17,3 +17,8 @@ D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\refint\Xadrez.dll
 D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\Xadrez.pdb
 D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\Xadrez.genruntimeconfig.cache
 D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\ref\Xadrez.dll
+D:\Projetos\Xadrez\Xadrez\bin\Debug\net10.0-windows\Guna.UI2.dll
+D:\Projetos\Xadrez\Xadrez\bin\Debug\net10.0-windows\System.Management.dll
+D:\Projetos\Xadrez\Xadrez\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\Xadrez.csproj.AssemblyReference.cache
+D:\Projetos\Xadrez\Xadrez\obj\Debug\net10.0-windows\Xadrez.csproj.Up2Date

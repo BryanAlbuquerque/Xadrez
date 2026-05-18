@@ -262,7 +262,17 @@ namespace Xadrez
             ColocarPeca(PeaoBranco08, H2);
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e)
+        private void Peca_Click(object sender, EventArgs e)
+        {
+            PictureBox peca = sender as PictureBox;
+            if (peca != null)
+            {
+                ColocarPeca(peca, peca.Parent as Panel);
+
+            }
+        }
+
+        private void btnIniciar_Click_1(object sender, EventArgs e)
         {
             if (checkBrancasP1.Checked)
             {
@@ -271,16 +281,6 @@ namespace Xadrez
             else if (checkPretasP1.Checked)
             {
                 PosicionarPretasEmCima();
-            }
-        }
-
-        private void Peca_Click(object sender, EventArgs e)
-        {
-            PictureBox peca = sender as PictureBox;
-            if (peca != null)
-            {
-                ColocarPeca(peca, peca.Parent as Panel);
-
             }
         }
     }
