@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\jogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|d:\\projetos\\xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|D:\\Projetos\\Xadrez\\xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{93152F8A-8682-78F6-8393-4386EE8BFFE5}|Xadrez\\Xadrez.csproj|solutionrelative:xadrez\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAYwAYBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAYwNEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T23:54:31.713Z",
               "IsPinned": true,
@@ -63,8 +63,7 @@
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs [Projeto]",
               "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T20:42:53.345Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-05-17T20:42:53.345Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Menu.cs [Projeto]",
               "RelativeToolTip": "Xadrez\\Forms\\Menu.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T20:54:17.656Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-05-18T20:54:17.656Z"
             }
           ]
         }
