@@ -5,6 +5,7 @@ namespace Xadrez
     public partial class Jogo : Form
     {
         private PictureBox pecaSelecionada;
+        private bool brancasEmCima = false;
 
         // CONTROLE DE TURNO
         private string turnoAtual = "Branco";
@@ -86,6 +87,7 @@ namespace Xadrez
             }
         }
 
+
         // REGISTRAR EVENTOS DAS PEÇAS
         private void RegistrarEventosPecas()
         {
@@ -119,17 +121,37 @@ namespace Xadrez
         // SELECIONAR PEÇA
         private void SelecionarPeca(object sender, EventArgs e)
         {
-            PictureBox peca = (PictureBox)sender;
+            PictureBox pecaClicada =
+                (PictureBox)sender;
 
-            DadosPeca dados = (DadosPeca)peca.Tag;
+            DadosPeca dadosClicados =
+                (DadosPeca)pecaClicada.Tag;
 
-            if (dados.Cor != turnoAtual)
+            if (pecaSelecionada != null)
+            {
+                DadosPeca dadosSelecionados =
+                    (DadosPeca)pecaSelecionada.Tag;
+
+                if (dadosSelecionados.Cor != dadosClicados.Cor)
+                {
+                    Panel destino =
+                        (Panel)pecaClicada.Parent;
+
+                    MoverPeca(destino, EventArgs.Empty);
+
+                    return;
+                }
+            }
+
+            // VERIFICA TURNO
+            if (dadosClicados.Cor != turnoAtual)
             {
                 MessageBox.Show("Não é o turno dessa peça.");
                 return;
             }
 
-            pecaSelecionada = peca;
+            // SELECIONA PEÇA
+            pecaSelecionada = pecaClicada;
         }
 
         // MOVER PEÇA
@@ -138,14 +160,18 @@ namespace Xadrez
             if (pecaSelecionada == null)
                 return;
 
-            Panel destino = (Panel)sender;
+            Panel destino = sender as Panel;
+
+            if (destino == null)
+                return;
 
             Panel origem = (Panel)pecaSelecionada.Parent;
 
             if (origem == destino)
                 return;
 
-            DadosPeca dados = (DadosPeca)pecaSelecionada.Tag;
+            DadosPeca dados =
+                (DadosPeca)pecaSelecionada.Tag;
 
             bool movimentoValido = false;
 
@@ -153,54 +179,67 @@ namespace Xadrez
             {
                 case "Peao":
                     movimentoValido =
-                        MovimentoPeaoValido(pecaSelecionada, destino);
+                        MovimentoPeaoValido(
+                            pecaSelecionada,
+                            destino);
                     break;
 
                 case "Torre":
                     movimentoValido =
-                        MovimentoTorreValido(origem, destino);
+                        MovimentoTorreValido(
+                            origem,
+                            destino);
                     break;
 
                 case "Bispo":
                     movimentoValido =
-                        MovimentoBispoValido(origem, destino);
+                        MovimentoBispoValido(
+                            origem,
+                            destino);
                     break;
 
                 case "Cavalo":
                     movimentoValido =
-                        MovimentoCavaloValido(origem, destino);
+                        MovimentoCavaloValido(
+                            origem,
+                            destino);
                     break;
 
                 case "Rainha":
                     movimentoValido =
-                        MovimentoRainhaValido(origem, destino);
+                        MovimentoRainhaValido(
+                            origem,
+                            destino);
                     break;
 
                 case "Rei":
                     movimentoValido =
-                        MovimentoReiValido(origem, destino);
+                        MovimentoReiValido(
+                            origem,
+                            destino);
                     break;
             }
 
             if (!movimentoValido)
             {
-                MessageBox.Show("Movimento inválido.");
+                MessageBox.Show("Movimento inválido");
                 return;
             }
 
             PictureBox pecaDestino =
                 ObterPecaNaCasa(destino);
 
-            // NÃO PODE CAPTURAR A PRÓPRIA PEÇA
+            // CAPTURA
             if (pecaDestino != null)
             {
                 DadosPeca dadosDestino =
                     (DadosPeca)pecaDestino.Tag;
 
+                // MESMA COR
                 if (dadosDestino.Cor == dados.Cor)
                 {
                     MessageBox.Show(
-                        "Você não pode capturar sua própria peça.");
+                        "Você não pode capturar sua própria peça");
                     return;
                 }
 
@@ -213,15 +252,13 @@ namespace Xadrez
 
             dados.JaMoveu = true;
 
-            AlternarTurno();
-
             pecaSelecionada = null;
+
+            AlternarTurno();
         }
 
         // PEÃO
-        private bool MovimentoPeaoValido(
-            PictureBox peca,
-            Panel destino)
+        private bool MovimentoPeaoValido(PictureBox peca, Panel destino)
         {
             DadosPeca dados = (DadosPeca)peca.Tag;
 
@@ -242,62 +279,43 @@ namespace Xadrez
             PictureBox pecaDestino =
                 ObterPecaNaCasa(destino);
 
-            // BRANCO
+            int direcao;
+
+            // DEFINE DIREÇÃO
             if (dados.Cor == "Branco")
             {
-                // FRENTE
-                if (colunaOrigem == colunaDestino)
-                {
-                    // 1 CASA
-                    if (diferencaLinha == 1 &&
-                        pecaDestino == null)
-                    {
-                        return true;
-                    }
+                direcao = brancasEmCima ? -1 : 1;
+            }
+            else
+            {
+                direcao = brancasEmCima ? 1 : -1;
+            }
 
-                    // 2 CASAS
-                    if (!dados.JaMoveu &&
-                        diferencaLinha == 2 &&
-                        pecaDestino == null)
-                    {
-                        return true;
-                    }
+            // MOVIMENTO PARA FRENTE
+            if (colunaOrigem == colunaDestino)
+            {
+                // 1 CASA
+                if (diferencaLinha == direcao &&
+                    pecaDestino == null)
+                {
+                    return true;
                 }
 
-                // CAPTURA
-                if (diferencaColuna == 1 &&
-                    diferencaLinha == 1 &&
-                    pecaDestino != null)
+                // 2 CASAS
+                if (!dados.JaMoveu &&
+                    diferencaLinha == direcao * 2 &&
+                    pecaDestino == null)
                 {
                     return true;
                 }
             }
 
-            // PRETO
-            else
+            // CAPTURA DIAGONAL
+            if (diferencaColuna == 1 &&
+                diferencaLinha == direcao &&
+                pecaDestino != null)
             {
-                if (colunaOrigem == colunaDestino)
-                {
-                    if (diferencaLinha == -1 &&
-                        pecaDestino == null)
-                    {
-                        return true;
-                    }
-
-                    if (!dados.JaMoveu &&
-                        diferencaLinha == -2 &&
-                        pecaDestino == null)
-                    {
-                        return true;
-                    }
-                }
-
-                if (diferencaColuna == 1 &&
-                    diferencaLinha == -1 &&
-                    pecaDestino != null)
-                {
-                    return true;
-                }
+                return true;
             }
 
             return false;
@@ -513,14 +531,14 @@ namespace Xadrez
         private void PosicionarBrancasEmCima()
         {
             // BRANCAS EM CIMA
-            ColocarPeca(TorreBranco01, A8);
+            ColocarPeca(TorreBranca01, A8);
             ColocarPeca(CavaloBranco01, B8);
             ColocarPeca(BispoBranco01, C8);
-            ColocarPeca(RainhaBranco, D8);
+            ColocarPeca(RainhaBranca, D8);
             ColocarPeca(ReiBranco, E8);
             ColocarPeca(BispoBranco02, F8);
             ColocarPeca(CavaloBranco02, G8);
-            ColocarPeca(TorreBranco02, H8);
+            ColocarPeca(TorreBranca02, H8);
 
             ColocarPeca(PeaoBranco01, A7);
             ColocarPeca(PeaoBranco02, B7);
@@ -532,14 +550,14 @@ namespace Xadrez
             ColocarPeca(PeaoBranco08, H7);
 
             // PRETAS EMBAIXO
-            ColocarPeca(TorrePreto01, A1);
+            ColocarPeca(TorrePreta01, A1);
             ColocarPeca(CavaloPreto01, B1);
             ColocarPeca(BispoPreto01, C1);
-            ColocarPeca(RainhaPreto, D1);
+            ColocarPeca(RainhaPreta, D1);
             ColocarPeca(ReiPreto, E1);
             ColocarPeca(BispoPreto02, F1);
             ColocarPeca(CavaloPreto02, G1);
-            ColocarPeca(TorrePreto02, H1);
+            ColocarPeca(TorrePreta02, H1);
 
             ColocarPeca(PeaoPreto01, A2);
             ColocarPeca(PeaoPreto02, B2);
@@ -551,21 +569,18 @@ namespace Xadrez
             ColocarPeca(PeaoPreto08, H2);
         }
 
-        // =========================================================
         // POSICIONAR PRETAS EM CIMA
-        // =========================================================
-
         private void PosicionarPretasEmCima()
         {
             // PRETAS EM CIMA
-            ColocarPeca(TorrePreto01, A8);
+            ColocarPeca(TorrePreta01, A8);
             ColocarPeca(CavaloPreto01, B8);
             ColocarPeca(BispoPreto01, C8);
-            ColocarPeca(RainhaPreto, D8);
+            ColocarPeca(RainhaPreta, D8);
             ColocarPeca(ReiPreto, E8);
             ColocarPeca(BispoPreto02, F8);
             ColocarPeca(CavaloPreto02, G8);
-            ColocarPeca(TorrePreto02, H8);
+            ColocarPeca(TorrePreta02, H8);
 
             ColocarPeca(PeaoPreto01, A7);
             ColocarPeca(PeaoPreto02, B7);
@@ -577,14 +592,14 @@ namespace Xadrez
             ColocarPeca(PeaoPreto08, H7);
 
             // BRANCAS EMBAIXO
-            ColocarPeca(TorreBranco01, A1);
+            ColocarPeca(TorreBranca01, A1);
             ColocarPeca(CavaloBranco01, B1);
             ColocarPeca(BispoBranco01, C1);
-            ColocarPeca(RainhaBranco, D1);
+            ColocarPeca(RainhaBranca, D1);
             ColocarPeca(ReiBranco, E1);
             ColocarPeca(BispoBranco02, F1);
             ColocarPeca(CavaloBranco02, G1);
-            ColocarPeca(TorreBranco02, H1);
+            ColocarPeca(TorreBranca02, H1);
 
             ColocarPeca(PeaoBranco01, A2);
             ColocarPeca(PeaoBranco02, B2);
@@ -597,14 +612,19 @@ namespace Xadrez
         }
 
         // INICIAR JOGO
-        private void btnIniciar_Click(object sender, EventArgs e)
+        private void btnIniciar_Click_1(object sender, EventArgs e)
         {
+            lblTurno.Visible = true;
             if (checkBrancasP1.Checked)
             {
+                brancasEmCima = true;
+
                 PosicionarBrancasEmCima();
             }
             else if (checkPretasP1.Checked)
             {
+                brancasEmCima = false;
+
                 PosicionarPretasEmCima();
             }
         }

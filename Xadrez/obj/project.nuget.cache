@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OQgfP4rUC+o=",
+  "dgSpecHash": "0Al8/5e3Qwc=",
   "success": true,
   "projectFilePath": "D:\\Projetos\\Xadrez\\Xadrez\\Xadrez.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\bryan\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
-    "C:\\Users\\bryan\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
