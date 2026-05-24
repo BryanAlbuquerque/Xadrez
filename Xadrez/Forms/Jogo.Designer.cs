@@ -134,6 +134,7 @@
             checkPretasP1 = new CheckBox();
             checkBrancasP1 = new CheckBox();
             btnIniciar = new Guna.UI2.WinForms.Guna2GradientButton();
+            lblTurno = new Label();
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
@@ -1283,7 +1284,18 @@
             btnIniciar.Size = new Size(157, 43);
             btnIniciar.TabIndex = 125;
             btnIniciar.Text = "Iniciar";
-            btnIniciar.Click += btnIniciar_Click_1;
+            btnIniciar.Click += btnIniciar_Click;
+            // 
+            // lblTurno
+            // 
+            lblTurno.AutoSize = true;
+            lblTurno.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTurno.ForeColor = Color.Black;
+            lblTurno.Location = new Point(901, 381);
+            lblTurno.Name = "lblTurno";
+            lblTurno.Size = new Size(86, 25);
+            lblTurno.TabIndex = 126;
+            lblTurno.Text = "Jogador";
             // 
             // Jogo
             // 
@@ -1291,6 +1303,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Aquamarine;
             ClientSize = new Size(1059, 737);
+            Controls.Add(lblTurno);
             Controls.Add(btnIniciar);
             Controls.Add(checkPretasP1);
             Controls.Add(checkBrancasP1);
@@ -1540,5 +1553,6 @@
         private CheckBox checkBrancasP1;
         private Guna.UI2.WinForms.Guna2GradientButton btnIniciar;
         private ListView listView;
+        private Label lblTurno;
     }
 }

@@ -5,181 +5,495 @@ namespace Xadrez
     public partial class Jogo : Form
     {
         private PictureBox pecaSelecionada;
+
+        // CONTROLE DE TURNO
+        private string turnoAtual = "Branco";
+
         public Jogo()
         {
             InitializeComponent();
 
-            checkBrancasP1.CheckedChanged += AtualizarChecks;
-            checkPretasP1.CheckedChanged += AtualizarChecks;
-            checkBrancasP2.CheckedChanged += AtualizarChecks;
-            checkPretasP2.CheckedChanged += AtualizarChecks;
-
             RegistrarEventosPecas();
             RegistrarEventosCasas();
+
+            ConfigurarDadosDasPecas();
+
+            lblTurno.Text = "Turno: Branco";
         }
 
-        private void SelecionarPeca(object sender, EventArgs e)
+        // CONFIGURAR DADOS DAS PEÇAS
+        private void ConfigurarDadosDasPecas()
         {
-            pecaSelecionada = (PictureBox)sender;
+            foreach (Control controle in this.Controls)
+            {
+                if (controle is Panel panel)
+                {
+                    foreach (Control interno in panel.Controls)
+                    {
+                        if (interno is PictureBox peca)
+                        {
+                            string nome = peca.Name;
+
+                            string cor = nome.Contains("Branco")
+                                ? "Branco"
+                                : "Preto";
+
+                            string tipo = "";
+
+                            if (nome.Contains("Peao"))
+                                tipo = "Peao";
+
+                            else if (nome.Contains("Torre"))
+                                tipo = "Torre";
+
+                            else if (nome.Contains("Cavalo"))
+                                tipo = "Cavalo";
+
+                            else if (nome.Contains("Bispo"))
+                                tipo = "Bispo";
+
+                            else if (nome.Contains("Rainha"))
+                                tipo = "Rainha";
+
+                            else if (nome.Contains("Rei"))
+                                tipo = "Rei";
+
+                            peca.Tag = new DadosPeca()
+                            {
+                                Tipo = tipo,
+                                Cor = cor,
+                                JaMoveu = false
+                            };
+                        }
+                    }
+                }
+            }
         }
+
+        // REGISTRAR EVENTOS DAS PEÇAS
         private void RegistrarEventosPecas()
         {
-            //Brancas
-            ReiBranco.Click += SelecionarPeca;
-            RainhaBranca.Click += SelecionarPeca;
-            TorreBranca01.Click += SelecionarPeca;
-            TorreBranca02.Click += SelecionarPeca;
-
-            CavaloBranco01.Click += SelecionarPeca;
-            CavaloBranco02.Click += SelecionarPeca;
-
-            BispoBranco01.Click += SelecionarPeca;
-            BispoBranco02.Click += SelecionarPeca;
-
-            PeaoBranco01.Click += SelecionarPeca;
-            PeaoBranco02.Click += SelecionarPeca;
-            PeaoBranco03.Click += SelecionarPeca;
-            PeaoBranco04.Click += SelecionarPeca;
-            PeaoBranco05.Click += SelecionarPeca;
-            PeaoBranco06.Click += SelecionarPeca;
-            PeaoBranco07.Click += SelecionarPeca;
-            PeaoBranco08.Click += SelecionarPeca;
-
-            //Pretas
-            ReiPreto.Click += SelecionarPeca;
-            RainhaPreta.Click += SelecionarPeca;
-            TorrePreta01.Click += SelecionarPeca;
-            TorrePreta02.Click += SelecionarPeca;
-
-            CavaloPreto01.Click += SelecionarPeca;
-            CavaloPreto02.Click += SelecionarPeca;
-
-            BispoPreto01.Click += SelecionarPeca;
-            BispoPreto02.Click += SelecionarPeca;
-
-            PeaoPreto01.Click += SelecionarPeca;
-            PeaoPreto02.Click += SelecionarPeca;
-            PeaoPreto03.Click += SelecionarPeca;
-            PeaoPreto04.Click += SelecionarPeca;
-            PeaoPreto05.Click += SelecionarPeca;
-            PeaoPreto06.Click += SelecionarPeca;
-            PeaoPreto07.Click += SelecionarPeca;
-            PeaoPreto08.Click += SelecionarPeca;
+            foreach (Control controle in this.Controls)
+            {
+                if (controle is Panel panel)
+                {
+                    foreach (Control interno in panel.Controls)
+                    {
+                        if (interno is PictureBox peca)
+                        {
+                            peca.Click += SelecionarPeca;
+                        }
+                    }
+                }
+            }
         }
 
+        // REGISTRAR EVENTOS DAS CASAS
+        private void RegistrarEventosCasas()
+        {
+            foreach (Control controle in this.Controls)
+            {
+                if (controle is Panel panel)
+                {
+                    panel.Click += MoverPeca;
+                }
+            }
+        }
+
+        // SELECIONAR PEÇA
+        private void SelecionarPeca(object sender, EventArgs e)
+        {
+            PictureBox peca = (PictureBox)sender;
+
+            DadosPeca dados = (DadosPeca)peca.Tag;
+
+            if (dados.Cor != turnoAtual)
+            {
+                MessageBox.Show("Não é o turno dessa peça.");
+                return;
+            }
+
+            pecaSelecionada = peca;
+        }
+
+        // MOVER PEÇA
         private void MoverPeca(object sender, EventArgs e)
         {
             if (pecaSelecionada == null)
                 return;
 
-            Panel casaDestino = (Panel)sender;
+            Panel destino = (Panel)sender;
 
-            ColocarPeca(pecaSelecionada, casaDestino);
+            Panel origem = (Panel)pecaSelecionada.Parent;
+
+            if (origem == destino)
+                return;
+
+            DadosPeca dados = (DadosPeca)pecaSelecionada.Tag;
+
+            bool movimentoValido = false;
+
+            switch (dados.Tipo)
+            {
+                case "Peao":
+                    movimentoValido =
+                        MovimentoPeaoValido(pecaSelecionada, destino);
+                    break;
+
+                case "Torre":
+                    movimentoValido =
+                        MovimentoTorreValido(origem, destino);
+                    break;
+
+                case "Bispo":
+                    movimentoValido =
+                        MovimentoBispoValido(origem, destino);
+                    break;
+
+                case "Cavalo":
+                    movimentoValido =
+                        MovimentoCavaloValido(origem, destino);
+                    break;
+
+                case "Rainha":
+                    movimentoValido =
+                        MovimentoRainhaValido(origem, destino);
+                    break;
+
+                case "Rei":
+                    movimentoValido =
+                        MovimentoReiValido(origem, destino);
+                    break;
+            }
+
+            if (!movimentoValido)
+            {
+                MessageBox.Show("Movimento inválido.");
+                return;
+            }
+
+            PictureBox pecaDestino =
+                ObterPecaNaCasa(destino);
+
+            // NÃO PODE CAPTURAR A PRÓPRIA PEÇA
+            if (pecaDestino != null)
+            {
+                DadosPeca dadosDestino =
+                    (DadosPeca)pecaDestino.Tag;
+
+                if (dadosDestino.Cor == dados.Cor)
+                {
+                    MessageBox.Show(
+                        "Você não pode capturar sua própria peça.");
+                    return;
+                }
+
+                destino.Controls.Remove(pecaDestino);
+
+                pecaDestino.Dispose();
+            }
+
+            ColocarPeca(pecaSelecionada, destino);
+
+            dados.JaMoveu = true;
+
+            AlternarTurno();
 
             pecaSelecionada = null;
         }
-        private void RegistrarEventosCasas()
+
+        // PEÃO
+        private bool MovimentoPeaoValido(
+            PictureBox peca,
+            Panel destino)
         {
-            A1.Click += MoverPeca;
-            A2.Click += MoverPeca;
-            A3.Click += MoverPeca;
-            A4.Click += MoverPeca;
-            A5.Click += MoverPeca;
-            A6.Click += MoverPeca;
-            A7.Click += MoverPeca;
-            A8.Click += MoverPeca;
+            DadosPeca dados = (DadosPeca)peca.Tag;
 
-            B1.Click += MoverPeca;
-            B2.Click += MoverPeca;
-            B3.Click += MoverPeca;
-            B4.Click += MoverPeca;
-            B5.Click += MoverPeca;
-            B6.Click += MoverPeca;
-            B7.Click += MoverPeca;
-            B8.Click += MoverPeca;
+            Panel origem = (Panel)peca.Parent;
 
-            C1.Click += MoverPeca;
-            C2.Click += MoverPeca;
-            C3.Click += MoverPeca;
-            C4.Click += MoverPeca;
-            C5.Click += MoverPeca;
-            C6.Click += MoverPeca;
-            C7.Click += MoverPeca;
-            C8.Click += MoverPeca;
+            int linhaOrigem = ObterLinha(origem);
+            int linhaDestino = ObterLinha(destino);
 
-            D1.Click += MoverPeca;
-            D2.Click += MoverPeca;
-            D3.Click += MoverPeca;
-            D4.Click += MoverPeca;
-            D5.Click += MoverPeca;
-            D6.Click += MoverPeca;
-            D7.Click += MoverPeca;
-            D8.Click += MoverPeca;
+            int diferencaLinha =
+                linhaDestino - linhaOrigem;
 
-            E1.Click += MoverPeca;
-            E2.Click += MoverPeca;
-            E3.Click += MoverPeca;
-            E4.Click += MoverPeca;
-            E5.Click += MoverPeca;
-            E6.Click += MoverPeca;
-            E7.Click += MoverPeca;
-            E8.Click += MoverPeca;
+            char colunaOrigem = ObterColuna(origem);
+            char colunaDestino = ObterColuna(destino);
 
-            F1.Click += MoverPeca;
-            F2.Click += MoverPeca;
-            F3.Click += MoverPeca;
-            F4.Click += MoverPeca;
-            F5.Click += MoverPeca;
-            F6.Click += MoverPeca;
-            F7.Click += MoverPeca;
-            F8.Click += MoverPeca;
+            int diferencaColuna =
+                Math.Abs(colunaDestino - colunaOrigem);
 
-            G1.Click += MoverPeca;
-            G2.Click += MoverPeca;
-            G3.Click += MoverPeca;
-            G4.Click += MoverPeca;
-            G5.Click += MoverPeca;
-            G6.Click += MoverPeca;
-            G7.Click += MoverPeca;
-            G8.Click += MoverPeca;
+            PictureBox pecaDestino =
+                ObterPecaNaCasa(destino);
 
-            H1.Click += MoverPeca;
-            H2.Click += MoverPeca;
-            H3.Click += MoverPeca;
-            H4.Click += MoverPeca;
-            H5.Click += MoverPeca;
-            H6.Click += MoverPeca;
-            H7.Click += MoverPeca;
-            H8.Click += MoverPeca;
+            // BRANCO
+            if (dados.Cor == "Branco")
+            {
+                // FRENTE
+                if (colunaOrigem == colunaDestino)
+                {
+                    // 1 CASA
+                    if (diferencaLinha == 1 &&
+                        pecaDestino == null)
+                    {
+                        return true;
+                    }
+
+                    // 2 CASAS
+                    if (!dados.JaMoveu &&
+                        diferencaLinha == 2 &&
+                        pecaDestino == null)
+                    {
+                        return true;
+                    }
+                }
+
+                // CAPTURA
+                if (diferencaColuna == 1 &&
+                    diferencaLinha == 1 &&
+                    pecaDestino != null)
+                {
+                    return true;
+                }
+            }
+
+            // PRETO
+            else
+            {
+                if (colunaOrigem == colunaDestino)
+                {
+                    if (diferencaLinha == -1 &&
+                        pecaDestino == null)
+                    {
+                        return true;
+                    }
+
+                    if (!dados.JaMoveu &&
+                        diferencaLinha == -2 &&
+                        pecaDestino == null)
+                    {
+                        return true;
+                    }
+                }
+
+                if (diferencaColuna == 1 &&
+                    diferencaLinha == -1 &&
+                    pecaDestino != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        private void AtualizarChecks(object sender, EventArgs e)
+        // TORRE
+        private bool MovimentoTorreValido(
+            Panel origem,
+            Panel destino)
         {
-            // PLAYER 1
-            checkBrancasP2.Visible = !checkBrancasP1.Checked;
-            checkPretasP2.Visible = !checkPretasP1.Checked;
+            bool linha =
+                ObterLinha(origem) == ObterLinha(destino);
 
-            // PLAYER 2
-            checkBrancasP1.Visible = !checkBrancasP2.Checked;
-            checkPretasP1.Visible = !checkPretasP2.Checked;
+            bool coluna =
+                ObterColuna(origem) == ObterColuna(destino);
+
+            if (!linha && !coluna)
+                return false;
+
+            return CaminhoLivre(origem, destino);
         }
 
-        // MÉTODO PARA COLOCAR PEÇA EM UMA CASA
-        private void ColocarPeca(PictureBox peca, Panel casa)
+        // BISPO
+        private bool MovimentoBispoValido(
+            Panel origem,
+            Panel destino)
+        {
+            int linha =
+                Math.Abs(
+                    ObterLinha(origem) -
+                    ObterLinha(destino));
+
+            int coluna =
+                Math.Abs(
+                    ObterColuna(origem) -
+                    ObterColuna(destino));
+
+            if (linha != coluna)
+                return false;
+
+            return CaminhoLivre(origem, destino);
+        }
+
+        // CAVALO
+        private bool MovimentoCavaloValido(
+            Panel origem,
+            Panel destino)
+        {
+            int linha =
+                Math.Abs(
+                    ObterLinha(origem) -
+                    ObterLinha(destino));
+
+            int coluna =
+                Math.Abs(
+                    ObterColuna(origem) -
+                    ObterColuna(destino));
+
+            return (linha == 2 && coluna == 1)
+                || (linha == 1 && coluna == 2);
+        }
+
+        // RAINHA
+        private bool MovimentoRainhaValido(
+            Panel origem,
+            Panel destino)
+        {
+            return MovimentoTorreValido(origem, destino)
+                || MovimentoBispoValido(origem, destino);
+        }
+
+        // REI
+        private bool MovimentoReiValido(
+            Panel origem,
+            Panel destino)
+        {
+            int linha =
+                Math.Abs(
+                    ObterLinha(origem) -
+                    ObterLinha(destino));
+
+            int coluna =
+                Math.Abs(
+                    ObterColuna(origem) -
+                    ObterColuna(destino));
+
+            return linha <= 1 && coluna <= 1;
+        }
+
+        // CAMINHO LIVRE
+        private bool CaminhoLivre(
+            Panel origem,
+            Panel destino)
+        {
+            int linhaOrigem = ObterLinha(origem);
+            int colunaOrigem = ObterIndiceColuna(origem);
+
+            int linhaDestino = ObterLinha(destino);
+            int colunaDestino = ObterIndiceColuna(destino);
+
+            int direcaoLinha =
+                Math.Sign(linhaDestino - linhaOrigem);
+
+            int direcaoColuna =
+                Math.Sign(colunaDestino - colunaOrigem);
+
+            int linhaAtual =
+                linhaOrigem + direcaoLinha;
+
+            int colunaAtual =
+                colunaOrigem + direcaoColuna;
+
+            while (
+                linhaAtual != linhaDestino ||
+                colunaAtual != colunaDestino)
+            {
+                Panel casa =
+                    ObterCasa(linhaAtual, colunaAtual);
+
+                if (ObterPecaNaCasa(casa) != null)
+                {
+                    return false;
+                }
+
+                linhaAtual += direcaoLinha;
+                colunaAtual += direcaoColuna;
+            }
+
+            return true;
+        }
+
+        // OBTER CASA
+        private Panel ObterCasa(int linha, int coluna)
+        {
+            string nome =
+                $"{(char)('A' + coluna)}{linha}";
+
+            foreach (Control controle in this.Controls)
+            {
+                if (controle is Panel panel &&
+                    panel.Name == nome)
+                {
+                    return panel;
+                }
+            }
+
+            return null;
+        }
+
+        // PEÇA NA CASA
+        private PictureBox ObterPecaNaCasa(Panel casa)
+        {
+            foreach (Control controle in casa.Controls)
+            {
+                if (controle is PictureBox peca)
+                {
+                    return peca;
+                }
+            }
+
+            return null;
+        }
+
+        // LINHA/COLUNA
+        private int ObterLinha(Panel casa)
+        {
+            return int.Parse(
+                casa.Name[1].ToString());
+        }
+
+        private char ObterColuna(Panel casa)
+        {
+            return casa.Name[0];
+        }
+
+        private int ObterIndiceColuna(Panel casa)
+        {
+            return casa.Name[0] - 'A';
+        }
+
+        // ALTERNAR TURNO
+        private void AlternarTurno()
+        {
+            turnoAtual =
+                turnoAtual == "Branco"
+                ? "Preto"
+                : "Branco";
+
+            lblTurno.Text =
+                $"Turno: {turnoAtual}";
+        }
+
+        // COLOCAR PEÇA
+        private void ColocarPeca(
+            PictureBox peca,
+            Panel casa)
         {
             peca.Parent = casa;
 
             peca.Location = new Point(0, 0);
 
-            peca.SizeMode = PictureBoxSizeMode.StretchImage;
-
             peca.Dock = DockStyle.Fill;
+
+            peca.SizeMode =
+                PictureBoxSizeMode.StretchImage;
 
             peca.BringToFront();
 
             peca.Visible = true;
         }
 
+        // POSICIONAR PEÇAS
         private void PosicionarBrancasEmCima()
         {
             // BRANCAS EM CIMA
@@ -220,6 +534,10 @@ namespace Xadrez
             ColocarPeca(PeaoPreto07, G2);
             ColocarPeca(PeaoPreto08, H2);
         }
+
+        // =========================================================
+        // POSICIONAR PRETAS EM CIMA
+        // =========================================================
 
         private void PosicionarPretasEmCima()
         {
@@ -262,17 +580,8 @@ namespace Xadrez
             ColocarPeca(PeaoBranco08, H2);
         }
 
-        private void Peca_Click(object sender, EventArgs e)
-        {
-            PictureBox peca = sender as PictureBox;
-            if (peca != null)
-            {
-                ColocarPeca(peca, peca.Parent as Panel);
-
-            }
-        }
-
-        private void btnIniciar_Click_1(object sender, EventArgs e)
+        // INICIAR JOGO
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (checkBrancasP1.Checked)
             {
