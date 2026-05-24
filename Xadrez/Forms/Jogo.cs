@@ -513,14 +513,14 @@ namespace Xadrez
         private void PosicionarBrancasEmCima()
         {
             // BRANCAS EM CIMA
-            ColocarPeca(TorreBranca01, A8);
+            ColocarPeca(TorreBranco01, A8);
             ColocarPeca(CavaloBranco01, B8);
             ColocarPeca(BispoBranco01, C8);
-            ColocarPeca(RainhaBranca, D8);
+            ColocarPeca(RainhaBranco, D8);
             ColocarPeca(ReiBranco, E8);
             ColocarPeca(BispoBranco02, F8);
             ColocarPeca(CavaloBranco02, G8);
-            ColocarPeca(TorreBranca02, H8);
+            ColocarPeca(TorreBranco02, H8);
 
             ColocarPeca(PeaoBranco01, A7);
             ColocarPeca(PeaoBranco02, B7);
@@ -532,14 +532,14 @@ namespace Xadrez
             ColocarPeca(PeaoBranco08, H7);
 
             // PRETAS EMBAIXO
-            ColocarPeca(TorrePreta01, A1);
+            ColocarPeca(TorrePreto01, A1);
             ColocarPeca(CavaloPreto01, B1);
             ColocarPeca(BispoPreto01, C1);
-            ColocarPeca(RainhaPreta, D1);
+            ColocarPeca(RainhaPreto, D1);
             ColocarPeca(ReiPreto, E1);
             ColocarPeca(BispoPreto02, F1);
             ColocarPeca(CavaloPreto02, G1);
-            ColocarPeca(TorrePreta02, H1);
+            ColocarPeca(TorrePreto02, H1);
 
             ColocarPeca(PeaoPreto01, A2);
             ColocarPeca(PeaoPreto02, B2);
@@ -558,14 +558,14 @@ namespace Xadrez
         private void PosicionarPretasEmCima()
         {
             // PRETAS EM CIMA
-            ColocarPeca(TorrePreta01, A8);
+            ColocarPeca(TorrePreto01, A8);
             ColocarPeca(CavaloPreto01, B8);
             ColocarPeca(BispoPreto01, C8);
-            ColocarPeca(RainhaPreta, D8);
+            ColocarPeca(RainhaPreto, D8);
             ColocarPeca(ReiPreto, E8);
             ColocarPeca(BispoPreto02, F8);
             ColocarPeca(CavaloPreto02, G8);
-            ColocarPeca(TorrePreta02, H8);
+            ColocarPeca(TorrePreto02, H8);
 
             ColocarPeca(PeaoPreto01, A7);
             ColocarPeca(PeaoPreto02, B7);
@@ -577,14 +577,14 @@ namespace Xadrez
             ColocarPeca(PeaoPreto08, H7);
 
             // BRANCAS EMBAIXO
-            ColocarPeca(TorreBranca01, A1);
+            ColocarPeca(TorreBranco01, A1);
             ColocarPeca(CavaloBranco01, B1);
             ColocarPeca(BispoBranco01, C1);
-            ColocarPeca(RainhaBranca, D1);
+            ColocarPeca(RainhaBranco, D1);
             ColocarPeca(ReiBranco, E1);
             ColocarPeca(BispoBranco02, F1);
             ColocarPeca(CavaloBranco02, G1);
-            ColocarPeca(TorreBranca02, H1);
+            ColocarPeca(TorreBranco02, H1);
 
             ColocarPeca(PeaoBranco01, A2);
             ColocarPeca(PeaoBranco02, B2);

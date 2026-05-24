@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jogo));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             A2 = new Panel();
             PeaoPreto01 = new PictureBox();
             A1 = new Panel();
-            TorrePreta01 = new PictureBox();
+            TorrePreto01 = new PictureBox();
             B1 = new Panel();
             CavaloPreto01 = new PictureBox();
             B2 = new Panel();
@@ -44,7 +44,7 @@
             C2 = new Panel();
             PeaoPreto03 = new PictureBox();
             D1 = new Panel();
-            RainhaPreta = new PictureBox();
+            RainhaPreto = new PictureBox();
             D2 = new Panel();
             PeaoPreto04 = new PictureBox();
             E1 = new Panel();
@@ -60,7 +60,7 @@
             G2 = new Panel();
             PeaoPreto07 = new PictureBox();
             H1 = new Panel();
-            TorrePreta02 = new PictureBox();
+            TorrePreto02 = new PictureBox();
             H2 = new Panel();
             PeaoPreto08 = new PictureBox();
             H3 = new Panel();
@@ -98,7 +98,7 @@
             H7 = new Panel();
             PeaoBranco08 = new PictureBox();
             H8 = new Panel();
-            TorreBranca02 = new PictureBox();
+            TorreBranco02 = new PictureBox();
             G7 = new Panel();
             PeaoBranco07 = new PictureBox();
             G8 = new Panel();
@@ -114,7 +114,7 @@
             D7 = new Panel();
             PeaoBranco04 = new PictureBox();
             D8 = new Panel();
-            RainhaBranca = new PictureBox();
+            RainhaBranco = new PictureBox();
             C7 = new Panel();
             PeaoBranco03 = new PictureBox();
             C8 = new Panel();
@@ -126,7 +126,7 @@
             B8 = new Panel();
             CavaloBranco01 = new PictureBox();
             A8 = new Panel();
-            TorreBranca01 = new PictureBox();
+            TorreBranco01 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             checkPretasP2 = new CheckBox();
@@ -138,7 +138,7 @@
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)TorrePreta01).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TorrePreto01).BeginInit();
             B1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CavaloPreto01).BeginInit();
             B2.SuspendLayout();
@@ -148,7 +148,7 @@
             C2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto03).BeginInit();
             D1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)RainhaPreta).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RainhaPreto).BeginInit();
             D2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto04).BeginInit();
             E1.SuspendLayout();
@@ -164,13 +164,13 @@
             G2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto07).BeginInit();
             H1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)TorrePreta02).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TorrePreto02).BeginInit();
             H2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto08).BeginInit();
             H7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoBranco08).BeginInit();
             H8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)TorreBranca02).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TorreBranco02).BeginInit();
             G7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoBranco07).BeginInit();
             G8.SuspendLayout();
@@ -186,7 +186,7 @@
             D7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoBranco04).BeginInit();
             D8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)RainhaBranca).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RainhaBranco).BeginInit();
             C7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoBranco03).BeginInit();
             C8.SuspendLayout();
@@ -198,7 +198,7 @@
             B8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CavaloBranco01).BeginInit();
             A8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)TorreBranca01).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TorreBranco01).BeginInit();
             SuspendLayout();
             // 
             // A2
@@ -227,23 +227,23 @@
             // 
             A1.BackColor = SystemColors.ActiveCaptionText;
             A1.BorderStyle = BorderStyle.FixedSingle;
-            A1.Controls.Add(TorrePreta01);
+            A1.Controls.Add(TorrePreto01);
             A1.Location = new Point(12, 12);
             A1.Name = "A1";
             A1.Size = new Size(88, 70);
             A1.TabIndex = 7;
             // 
-            // TorrePreta01
+            // TorrePreto01
             // 
-            TorrePreta01.Cursor = Cursors.Hand;
-            TorrePreta01.Image = (Image)resources.GetObject("TorrePreta01.Image");
-            TorrePreta01.Location = new Point(5, 4);
-            TorrePreta01.Name = "TorrePreta01";
-            TorrePreta01.Size = new Size(78, 60);
-            TorrePreta01.SizeMode = PictureBoxSizeMode.StretchImage;
-            TorrePreta01.TabIndex = 123;
-            TorrePreta01.TabStop = false;
-            TorrePreta01.Visible = false;
+            TorrePreto01.Cursor = Cursors.Hand;
+            TorrePreto01.Image = (Image)resources.GetObject("TorrePreto01.Image");
+            TorrePreto01.Location = new Point(5, 4);
+            TorrePreto01.Name = "TorrePreto01";
+            TorrePreto01.Size = new Size(78, 60);
+            TorrePreto01.SizeMode = PictureBoxSizeMode.StretchImage;
+            TorrePreto01.TabIndex = 123;
+            TorrePreto01.TabStop = false;
+            TorrePreto01.Visible = false;
             // 
             // B1
             // 
@@ -337,23 +337,23 @@
             // 
             D1.BackColor = Color.White;
             D1.BorderStyle = BorderStyle.Fixed3D;
-            D1.Controls.Add(RainhaPreta);
+            D1.Controls.Add(RainhaPreto);
             D1.Location = new Point(343, 12);
             D1.Name = "D1";
             D1.Size = new Size(88, 70);
             D1.TabIndex = 31;
             // 
-            // RainhaPreta
+            // RainhaPreto
             // 
-            RainhaPreta.Cursor = Cursors.Hand;
-            RainhaPreta.Image = (Image)resources.GetObject("RainhaPreta.Image");
-            RainhaPreta.Location = new Point(2, 3);
-            RainhaPreta.Name = "RainhaPreta";
-            RainhaPreta.Size = new Size(78, 60);
-            RainhaPreta.SizeMode = PictureBoxSizeMode.StretchImage;
-            RainhaPreta.TabIndex = 128;
-            RainhaPreta.TabStop = false;
-            RainhaPreta.Visible = false;
+            RainhaPreto.Cursor = Cursors.Hand;
+            RainhaPreto.Image = (Image)resources.GetObject("RainhaPreto.Image");
+            RainhaPreto.Location = new Point(2, 3);
+            RainhaPreto.Name = "RainhaPreto";
+            RainhaPreto.Size = new Size(78, 60);
+            RainhaPreto.SizeMode = PictureBoxSizeMode.StretchImage;
+            RainhaPreto.TabIndex = 128;
+            RainhaPreto.TabStop = false;
+            RainhaPreto.Visible = false;
             // 
             // D2
             // 
@@ -513,23 +513,23 @@
             // 
             H1.BackColor = Color.White;
             H1.BorderStyle = BorderStyle.Fixed3D;
-            H1.Controls.Add(TorrePreta02);
+            H1.Controls.Add(TorrePreto02);
             H1.Location = new Point(794, 12);
             H1.Name = "H1";
             H1.Size = new Size(88, 70);
             H1.TabIndex = 63;
             // 
-            // TorrePreta02
+            // TorrePreto02
             // 
-            TorrePreta02.Cursor = Cursors.Hand;
-            TorrePreta02.Image = (Image)resources.GetObject("TorrePreta02.Image");
-            TorrePreta02.Location = new Point(4, 3);
-            TorrePreta02.Name = "TorrePreta02";
-            TorrePreta02.Size = new Size(78, 60);
-            TorrePreta02.SizeMode = PictureBoxSizeMode.StretchImage;
-            TorrePreta02.TabIndex = 122;
-            TorrePreta02.TabStop = false;
-            TorrePreta02.Visible = false;
+            TorrePreto02.Cursor = Cursors.Hand;
+            TorrePreto02.Image = (Image)resources.GetObject("TorrePreto02.Image");
+            TorrePreto02.Location = new Point(4, 3);
+            TorrePreto02.Name = "TorrePreto02";
+            TorrePreto02.Size = new Size(78, 60);
+            TorrePreto02.SizeMode = PictureBoxSizeMode.StretchImage;
+            TorrePreto02.TabIndex = 122;
+            TorrePreto02.TabStop = false;
+            TorrePreto02.Visible = false;
             // 
             // H2
             // 
@@ -869,23 +869,23 @@
             // 
             H8.BackColor = Color.Black;
             H8.BorderStyle = BorderStyle.FixedSingle;
-            H8.Controls.Add(TorreBranca02);
+            H8.Controls.Add(TorreBranco02);
             H8.Location = new Point(795, 589);
             H8.Name = "H8";
             H8.Size = new Size(88, 70);
             H8.TabIndex = 110;
             // 
-            // TorreBranca02
+            // TorreBranco02
             // 
-            TorreBranca02.Cursor = Cursors.Hand;
-            TorreBranca02.Image = (Image)resources.GetObject("TorreBranca02.Image");
-            TorreBranca02.Location = new Point(4, 3);
-            TorreBranca02.Name = "TorreBranca02";
-            TorreBranca02.Size = new Size(78, 60);
-            TorreBranca02.SizeMode = PictureBoxSizeMode.StretchImage;
-            TorreBranca02.TabIndex = 120;
-            TorreBranca02.TabStop = false;
-            TorreBranca02.Visible = false;
+            TorreBranco02.Cursor = Cursors.Hand;
+            TorreBranco02.Image = (Image)resources.GetObject("TorreBranco02.Image");
+            TorreBranco02.Location = new Point(4, 3);
+            TorreBranco02.Name = "TorreBranco02";
+            TorreBranco02.Size = new Size(78, 60);
+            TorreBranco02.SizeMode = PictureBoxSizeMode.StretchImage;
+            TorreBranco02.TabIndex = 120;
+            TorreBranco02.TabStop = false;
+            TorreBranco02.Visible = false;
             // 
             // G7
             // 
@@ -1045,23 +1045,23 @@
             // 
             D8.BackColor = SystemColors.ActiveCaptionText;
             D8.BorderStyle = BorderStyle.FixedSingle;
-            D8.Controls.Add(RainhaBranca);
+            D8.Controls.Add(RainhaBranco);
             D8.Location = new Point(343, 589);
             D8.Name = "D8";
             D8.Size = new Size(88, 70);
             D8.TabIndex = 102;
             // 
-            // RainhaBranca
+            // RainhaBranco
             // 
-            RainhaBranca.Cursor = Cursors.Hand;
-            RainhaBranca.Image = (Image)resources.GetObject("RainhaBranca.Image");
-            RainhaBranca.Location = new Point(3, 3);
-            RainhaBranca.Name = "RainhaBranca";
-            RainhaBranca.Size = new Size(78, 60);
-            RainhaBranca.SizeMode = PictureBoxSizeMode.StretchImage;
-            RainhaBranca.TabIndex = 124;
-            RainhaBranca.TabStop = false;
-            RainhaBranca.Visible = false;
+            RainhaBranco.Cursor = Cursors.Hand;
+            RainhaBranco.Image = (Image)resources.GetObject("RainhaBranco.Image");
+            RainhaBranco.Location = new Point(3, 3);
+            RainhaBranco.Name = "RainhaBranco";
+            RainhaBranco.Size = new Size(78, 60);
+            RainhaBranco.SizeMode = PictureBoxSizeMode.StretchImage;
+            RainhaBranco.TabIndex = 124;
+            RainhaBranco.TabStop = false;
+            RainhaBranco.Visible = false;
             // 
             // C7
             // 
@@ -1177,23 +1177,23 @@
             // 
             A8.BackColor = SystemColors.ControlLightLight;
             A8.BorderStyle = BorderStyle.Fixed3D;
-            A8.Controls.Add(TorreBranca01);
+            A8.Controls.Add(TorreBranco01);
             A8.Location = new Point(14, 589);
             A8.Name = "A8";
             A8.Size = new Size(88, 70);
             A8.TabIndex = 96;
             // 
-            // TorreBranca01
+            // TorreBranco01
             // 
-            TorreBranca01.Cursor = Cursors.Hand;
-            TorreBranca01.Image = (Image)resources.GetObject("TorreBranca01.Image");
-            TorreBranca01.Location = new Point(3, 2);
-            TorreBranca01.Name = "TorreBranca01";
-            TorreBranca01.Size = new Size(78, 60);
-            TorreBranca01.SizeMode = PictureBoxSizeMode.StretchImage;
-            TorreBranca01.TabIndex = 121;
-            TorreBranca01.TabStop = false;
-            TorreBranca01.Visible = false;
+            TorreBranco01.Cursor = Cursors.Hand;
+            TorreBranco01.Image = (Image)resources.GetObject("TorreBranco01.Image");
+            TorreBranco01.Location = new Point(3, 2);
+            TorreBranco01.Name = "TorreBranco01";
+            TorreBranco01.Size = new Size(78, 60);
+            TorreBranco01.SizeMode = PictureBoxSizeMode.StretchImage;
+            TorreBranco01.TabIndex = 121;
+            TorreBranco01.TabStop = false;
+            TorreBranco01.Visible = false;
             // 
             // label1
             // 
@@ -1268,7 +1268,7 @@
             // btnIniciar
             // 
             btnIniciar.BorderRadius = 10;
-            btnIniciar.CustomizableEdges = customizableEdges1;
+            btnIniciar.CustomizableEdges = customizableEdges3;
             btnIniciar.DisabledState.BorderColor = Color.DarkGray;
             btnIniciar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnIniciar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1280,7 +1280,7 @@
             btnIniciar.ForeColor = Color.White;
             btnIniciar.Location = new Point(901, 196);
             btnIniciar.Name = "btnIniciar";
-            btnIniciar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnIniciar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnIniciar.Size = new Size(157, 43);
             btnIniciar.TabIndex = 125;
             btnIniciar.Text = "Iniciar";
@@ -1382,7 +1382,7 @@
             A2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).EndInit();
             A1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)TorrePreta01).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TorrePreto01).EndInit();
             B1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CavaloPreto01).EndInit();
             B2.ResumeLayout(false);
@@ -1392,7 +1392,7 @@
             C2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto03).EndInit();
             D1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)RainhaPreta).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RainhaPreto).EndInit();
             D2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto04).EndInit();
             E1.ResumeLayout(false);
@@ -1408,13 +1408,13 @@
             G2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto07).EndInit();
             H1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)TorrePreta02).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TorrePreto02).EndInit();
             H2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoPreto08).EndInit();
             H7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoBranco08).EndInit();
             H8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)TorreBranca02).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TorreBranco02).EndInit();
             G7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoBranco07).EndInit();
             G8.ResumeLayout(false);
@@ -1430,7 +1430,7 @@
             D7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoBranco04).EndInit();
             D8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)RainhaBranca).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RainhaBranco).EndInit();
             C7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PeaoBranco03).EndInit();
             C8.ResumeLayout(false);
@@ -1442,7 +1442,7 @@
             B8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CavaloBranco01).EndInit();
             A8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)TorreBranca01).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TorreBranco01).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1520,14 +1520,14 @@
         private PictureBox PeaoBranco03;
         private PictureBox PeaoBranco02;
         private PictureBox PeaoBranco01;
-        private PictureBox TorreBranca02;
-        private PictureBox TorreBranca01;
+        private PictureBox TorreBranco02;
+        private PictureBox TorreBranco01;
         private PictureBox CavaloBranco02;
         private PictureBox BispoBranco02;
         private PictureBox BispoBranco01;
         private PictureBox CavaloBranco01;
         private PictureBox ReiBranco;
-        private PictureBox RainhaBranca;
+        private PictureBox RainhaBranco;
         private PictureBox PeaoPreto01;
         private PictureBox PeaoPreto02;
         private PictureBox PeaoPreto03;
@@ -1536,14 +1536,14 @@
         private PictureBox PeaoPreto06;
         private PictureBox PeaoPreto07;
         private PictureBox pictureBox18;
-        private PictureBox TorrePreta01;
+        private PictureBox TorrePreto01;
         private PictureBox CavaloPreto01;
         private PictureBox BispoPreto01;
-        private PictureBox RainhaPreta;
+        private PictureBox RainhaPreto;
         private PictureBox ReiPreto;
         private PictureBox BispoPreto02;
         private PictureBox CavaloPreto02;
-        private PictureBox TorrePreta02;
+        private PictureBox TorrePreto02;
         private PictureBox PeaoPreto08;
         private Label label1;
         private Label label2;
