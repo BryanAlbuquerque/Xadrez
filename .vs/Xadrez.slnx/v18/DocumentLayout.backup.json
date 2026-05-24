@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T15:12:56.299Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,7 +45,7 @@
               "RelativeDocumentMoniker": "Xadrez\\Forms\\Jogo.cs",
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs",
               "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs",
-              "ViewState": "AgIAAD0CAAAAAAAAAAAgwEkCAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T23:54:31.713Z",
               "IsPinned": true,
@@ -77,8 +76,7 @@
               "ToolTip": "D:\\Projetos\\Xadrez\\Xadrez\\Forms\\Jogo.cs [Projeto]",
               "RelativeToolTip": "Xadrez\\Forms\\Jogo.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T20:42:53.345Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-05-17T20:42:53.345Z"
             }
           ]
         }

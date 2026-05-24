@@ -13,12 +13,28 @@ namespace Xadrez
         {
             InitializeComponent();
 
+            checkBrancasP1.CheckedChanged += AtualizarChecks;
+            checkPretasP1.CheckedChanged += AtualizarChecks;
+            checkBrancasP2.CheckedChanged += AtualizarChecks;
+            checkPretasP2.CheckedChanged += AtualizarChecks;
+
             RegistrarEventosPecas();
             RegistrarEventosCasas();
 
             ConfigurarDadosDasPecas();
 
             lblTurno.Text = "Turno: Branco";
+        }
+
+        private void AtualizarChecks(object sender, EventArgs e)
+        {
+            // PLAYER 1
+            checkBrancasP2.Visible = !checkBrancasP1.Checked;
+            checkPretasP2.Visible = !checkPretasP1.Checked;
+
+            // PLAYER 2
+            checkBrancasP1.Visible = !checkBrancasP2.Checked;
+            checkPretasP1.Visible = !checkPretasP2.Checked;
         }
 
         // CONFIGURAR DADOS DAS PEÇAS
