@@ -133,6 +133,8 @@
             checkBrancasP1 = new CheckBox();
             lblTurno = new Label();
             btnIniciar = new Button();
+            lblPecasPretasRemovidas = new Label();
+            lblPecasBrancasRemovidas = new Label();
             A2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PeaoPreto01).BeginInit();
             A1.SuspendLayout();
@@ -1250,6 +1252,7 @@
             checkPretasP1.TabIndex = 124;
             checkPretasP1.Text = "Peças Pretas";
             checkPretasP1.UseVisualStyleBackColor = true;
+            checkPretasP1.CheckedChanged += checkPretasP1_CheckedChanged;
             // 
             // checkBrancasP1
             // 
@@ -1262,6 +1265,7 @@
             checkBrancasP1.TabIndex = 123;
             checkBrancasP1.Text = "Peças Brancas";
             checkBrancasP1.UseVisualStyleBackColor = true;
+            checkBrancasP1.CheckedChanged += checkBrancasP1_CheckedChanged;
             // 
             // lblTurno
             // 
@@ -1273,7 +1277,6 @@
             lblTurno.Size = new Size(86, 25);
             lblTurno.TabIndex = 126;
             lblTurno.Text = "Jogador";
-            lblTurno.Visible = false;
             // 
             // btnIniciar
             // 
@@ -1289,12 +1292,36 @@
             btnIniciar.UseVisualStyleBackColor = false;
             btnIniciar.Click += btnIniciar_Click_1;
             // 
+            // lblPecasPretasRemovidas
+            // 
+            lblPecasPretasRemovidas.AutoSize = true;
+            lblPecasPretasRemovidas.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPecasPretasRemovidas.ForeColor = Color.Black;
+            lblPecasPretasRemovidas.Location = new Point(349, 674);
+            lblPecasPretasRemovidas.Name = "lblPecasPretasRemovidas";
+            lblPecasPretasRemovidas.Size = new Size(173, 25);
+            lblPecasPretasRemovidas.TabIndex = 128;
+            lblPecasPretasRemovidas.Text = "Pretas Capturadas";
+            // 
+            // lblPecasBrancasRemovidas
+            // 
+            lblPecasBrancasRemovidas.AutoSize = true;
+            lblPecasBrancasRemovidas.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPecasBrancasRemovidas.ForeColor = Color.Black;
+            lblPecasBrancasRemovidas.Location = new Point(349, 703);
+            lblPecasBrancasRemovidas.Name = "lblPecasBrancasRemovidas";
+            lblPecasBrancasRemovidas.Size = new Size(187, 25);
+            lblPecasBrancasRemovidas.TabIndex = 129;
+            lblPecasBrancasRemovidas.Text = "Brancas Capturadas";
+            // 
             // Jogo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Aquamarine;
             ClientSize = new Size(1059, 737);
+            Controls.Add(lblPecasBrancasRemovidas);
+            Controls.Add(lblPecasPretasRemovidas);
             Controls.Add(btnIniciar);
             Controls.Add(lblTurno);
             Controls.Add(checkPretasP1);
@@ -1547,5 +1574,7 @@
         private ListView listView;
         private Label lblTurno;
         private Button btnIniciar;
+        private Label lblPecasPretasRemovidas;
+        private Label lblPecasBrancasRemovidas;
     }
 }

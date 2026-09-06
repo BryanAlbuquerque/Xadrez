@@ -1,0 +1,162 @@
+# ================================
+# Visual Studio
+# ================================
+
+.vs/
+.vscode/
+
+# Arquivos de usuário do Visual Studio
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Arquivos temporários do Visual Studio
+*.rsuser
+*.sln.docstates
+
+# ================================
+# Build / Compilação
+# ================================
+
+[Bb]in/
+[Oo]bj/
+
+# Resultados de build
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+
+# Arquivos gerados
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.log
+
+# ================================
+# NuGet
+# ================================
+
+packages/
+*.nupkg
+*.snupkg
+
+# Cache do NuGet
+.nuget/
+project.assets.json
+project.nuget.cache
+
+# ================================
+# Testes
+# ================================
+
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+
+# ================================
+# Rider / JetBrains
+# ================================
+
+.idea/
+*.sln.iml
+
+# ================================
+# Arquivos temporários
+# ================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ================================
+# Sistema operacional
+# ================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ================================
+# Arquivos de configuração local
+# ================================
+
+# Configurações específicas da máquina
+*.local
+
+# ================================
+# Code Coverage
+# ================================
+
+coverage/
+coverage.xml
+*.coverage
+*.coveragexml
+
+# ================================
+# Publish
+# ================================
+
+publish/
+Publish/
+*.publishsettings
+
+# ================================
+# Arquivos gerados pelo MSBuild
+# ================================
+
+*.pidb
+*.svclog
+*.tlog
+
+# ================================
+# DotCover
+# ================================
+
+*.dotCover
+
+# ================================
+# ReSharper
+# ================================
+
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# ================================
+# Microsoft Azure
+# ================================
+
+.azure/
+
+# ================================
+# Arquivos de configuração de usuário
+# ================================
+
+launchSettings.json.user
+
+# ================================
+# Ferramentas / caches
+# ================================
+
+*.ncrunch*
+*.ndproj
+*.sdf
+*.opensdf
+*.opendb
