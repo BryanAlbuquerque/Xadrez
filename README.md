@@ -1,25 +1,8 @@
----
-
-# 📥 Download do jogo
-
-Para jogar, você não precisa instalar o Visual Studio ou abrir o código-fonte.
-
-O repositório possui uma pasta chamada **DownloadJogo**, que contém a versão já publicada do jogo.
-
-## 1. Acesse o repositório
-
-Abra a página do projeto no GitHub.
-
-Na página principal do repositório, localize a pasta:
-
-DownloadJogo
-
-
 # ♟️ Xadrez
 
-Aplicação desktop de xadrez desenvolvida em C# com Windows Forms, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
+Aplicação desktop de xadrez desenvolvida em **C# com Windows Forms**, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
 
-O projeto foi desenvolvido com uma arquitetura organizada para evitar que a interface visual seja responsável diretamente pelas regras do xadrez. O estado real da partida é mantido em um tabuleiro lógico, enquanto o Windows Forms atua apenas como camada de interação e representação visual.
+O projeto foi desenvolvido com uma arquitetura organizada para evitar que a interface visual seja responsável diretamente pelas regras do xadrez. O estado real da partida é mantido em um tabuleiro lógico, enquanto o Windows Forms atua como camada de interação e representação visual.
 
 ---
 
@@ -41,8 +24,13 @@ A aplicação possui:
 - Proteção do próprio Rei;
 - Xeque;
 - Xeque-mate;
+- Afogamento;
+- Roque pequeno;
+- Roque grande;
+- En passant;
+- Promoção de peões;
 - Contagem de peças capturadas;
-- Encerramento automático da partida;
+- Encerramento automático da partida.
 
 ---
 
@@ -76,7 +64,7 @@ Além da implementação do jogo, o projeto busca manter a lógica do xadrez ind
 
 ---
 
-## ♟️ Peças
+# ♟️ Peças
 
 O jogo possui todas as peças tradicionais do xadrez:
 
@@ -93,9 +81,9 @@ As regras de movimentação são verificadas pelo mecanismo de regras do jogo an
 
 ---
 
-## 🎮 Funcionamento
+# 🎮 Funcionamento
 
-### 1. Escolha dos jogadores
+## 1. Escolha dos jogadores
 
 Antes de iniciar uma partida, os jogadores podem definir qual deles ficará com as peças brancas ou pretas.
 
