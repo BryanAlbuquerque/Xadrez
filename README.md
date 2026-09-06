@@ -1,3 +1,10 @@
+# ♟️ Download do Jogo Xadrez
+No repositorio tem uma pasta com o Nome DonwloadJogo nela está contido os arquivos do jogo já publicado e funcional
+Copie essa pasta e coloque em alguma de sua preferencia
+
+Abra a pasta e inicie o Arquivo Xadrez.exe
+
+
 # ♟️ Xadrez
 
 Aplicação desktop de xadrez desenvolvida em **C# com Windows Forms**, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
