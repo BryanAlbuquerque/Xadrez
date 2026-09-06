@@ -1,6 +1,4 @@
-# ================================
-# Visual Studio
-# ================================
+﻿# Visual Studio
 
 .vs/
 .vscode/
@@ -15,9 +13,7 @@
 *.rsuser
 *.sln.docstates
 
-# ================================
 # Build / Compilação
-# ================================
 
 [Bb]in/
 [Oo]bj/
@@ -38,9 +34,7 @@ ARM64/
 *.ilk
 *.log
 
-# ================================
 # NuGet
-# ================================
 
 packages/
 *.nupkg
@@ -51,24 +45,18 @@ packages/
 project.assets.json
 project.nuget.cache
 
-# ================================
 # Testes
-# ================================
 
 TestResults/
 [Tt]est[Rr]esult*/
 *.trx
 
-# ================================
 # Rider / JetBrains
-# ================================
 
 .idea/
 *.sln.iml
 
-# ================================
 # Arquivos temporários
-# ================================
 
 *.tmp
 *.temp
@@ -77,9 +65,7 @@ TestResults/
 *.swo
 *~
 
-# ================================
 # Sistema operacional
-# ================================
 
 # Windows
 Thumbs.db
@@ -93,67 +79,49 @@ ehthumbs_vista.db
 .AppleDouble
 .LSOverride
 
-# ================================
 # Arquivos de configuração local
-# ================================
 
 # Configurações específicas da máquina
 *.local
 
-# ================================
 # Code Coverage
-# ================================
 
 coverage/
 coverage.xml
 *.coverage
 *.coveragexml
 
-# ================================
 # Publish
-# ================================
 
 publish/
 Publish/
 *.publishsettings
 
-# ================================
 # Arquivos gerados pelo MSBuild
-# ================================
 
 *.pidb
 *.svclog
 *.tlog
 
-# ================================
 # DotCover
-# ================================
 
 *.dotCover
 
-# ================================
 # ReSharper
-# ================================
 
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
-# ================================
 # Microsoft Azure
-# ================================
 
 .azure/
 
-# ================================
 # Arquivos de configuração de usuário
-# ================================
 
 launchSettings.json.user
 
-# ================================
 # Ferramentas / caches
-# ================================
 
 *.ncrunch*
 *.ndproj
