@@ -31,11 +31,6 @@ A aplicação possui:
 - Proteção do próprio Rei;
 - Xeque;
 - Xeque-mate;
-- Afogamento;
-- Roque pequeno;
-- Roque grande;
-- En passant;
-- Promoção de peões;
 - Contagem de peças capturadas;
 - Encerramento automático da partida.
 
