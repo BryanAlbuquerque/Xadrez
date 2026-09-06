@@ -26,9 +26,6 @@ A aplicação possui:
 - Xeque-mate;
 - Contagem de peças capturadas;
 - Encerramento automático da partida;
-- Roque;
-- En Passant;
-- Promoção de peões.
 
 ---
 
