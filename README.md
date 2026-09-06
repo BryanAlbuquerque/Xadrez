@@ -1,3 +1,20 @@
+---
+
+# 📥 Download do jogo
+
+Para jogar, você não precisa instalar o Visual Studio ou abrir o código-fonte.
+
+O repositório possui uma pasta chamada **DownloadJogo**, que contém a versão já publicada do jogo.
+
+## 1. Acesse o repositório
+
+Abra a página do projeto no GitHub.
+
+Na página principal do repositório, localize a pasta:
+
+DownloadJogo
+
+
 # ♟️ Xadrez
 
 Aplicação desktop de xadrez desenvolvida em C# com Windows Forms, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
