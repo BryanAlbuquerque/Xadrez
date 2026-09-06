@@ -1,8 +1,15 @@
 # ♟️ Xadrez
 
-Aplicação desktop de xadrez desenvolvida em C# com Windows Forms, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
+Aplicação desktop de xadrez desenvolvida em **C# com Windows Forms**, com foco na implementação das principais regras do jogo, gerenciamento de turnos entre dois jogadores e separação entre a lógica do jogo e a interface gráfica.
 
-O projeto foi desenvolvido com uma arquitetura organizada para evitar que a interface visual seja responsável diretamente pelas regras do xadrez. O estado real da partida é mantido em um tabuleiro lógico, enquanto o Windows Forms atua apenas como camada de interação e representação visual.
+O projeto foi desenvolvido com uma arquitetura organizada para evitar que a interface visual seja responsável diretamente pelas regras do xadrez. O estado real da partida é mantido em um tabuleiro lógico, enquanto o Windows Forms atua como camada de interação e representação visual.
+
+
+# Download do Jogo
+No repositorio tem uma pasta com o Nome DonwloadJogo nela está contido os arquivos do jogo já publicado e funcional
+Copie essa pasta e coloque em alguma de sua preferencia
+
+Abra a pasta e inicie o Arquivo Xadrez.exe
 
 ---
 
@@ -25,7 +32,7 @@ A aplicação possui:
 - Xeque;
 - Xeque-mate;
 - Contagem de peças capturadas;
-- Encerramento automático da partida;
+- Encerramento automático da partida.
 
 ---
 
@@ -59,7 +66,7 @@ Além da implementação do jogo, o projeto busca manter a lógica do xadrez ind
 
 ---
 
-## ♟️ Peças
+# ♟️ Peças
 
 O jogo possui todas as peças tradicionais do xadrez:
 
@@ -76,9 +83,9 @@ As regras de movimentação são verificadas pelo mecanismo de regras do jogo an
 
 ---
 
-## 🎮 Funcionamento
+# 🎮 Funcionamento
 
-### 1. Escolha dos jogadores
+## 1. Escolha dos jogadores
 
 Antes de iniciar uma partida, os jogadores podem definir qual deles ficará com as peças brancas ou pretas.
 
